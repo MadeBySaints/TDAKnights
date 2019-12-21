@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/Slime.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Enemies/Small Green Slime1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Enemies/Small Green Slime2.png" type="Texture" id=3]
+
+[sub_resource type="PackedScene" id=1]
+_bundled = {
+"conn_count": 0,
+"conns": PoolIntArray(  ),
+"editable_instances": [  ],
+"names": PoolStringArray(  ),
+"node_count": 0,
+"node_paths": [  ],
+"nodes": PoolIntArray(  ),
+"variants": [  ],
+"version": 2
+}
+
+[sub_resource type="CircleShape2D" id=2]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "moving",
+"speed": 5.0
+} ]
+
+[node name="Enemies" type="Node"]
+
+[node name="Normal Monster" type="Node" parent="."]
+
+[node name="Small Green Slime" type="Node2D" parent="Normal Monster"]
+script = ExtResource( 1 )
+slime = SubResource( 1 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Normal Monster/Small Green Slime"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Normal Monster/Small Green Slime/KinematicBody2D"]
+shape = SubResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Normal Monster/Small Green Slime"]
+frames = SubResource( 3 )
+animation = "idle"
+
+[node name="Normal Boss" type="Node" parent="."]
+
+[node name="Rare Monster" type="Node" parent="."]
+
+[node name="Rare Boss" type="Node" parent="."]
+
+[node name="Epic Monster" type="Node" parent="."]
+
+[node name="Epic Boss" type="Node" parent="."]
