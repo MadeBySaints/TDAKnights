@@ -1,0 +1,27 @@
+[gd_scene format=2]
+
+[node name="Player Inventory" type="VBoxContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Items Panel" type="Panel" parent="."]
+margin_right = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Items Panel"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="Items Panel/MarginContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+columns = 8
+
+[node name="ItemList" type="ItemList" parent="."]
+margin_top = 4.0
+margin_right = 40.0
+margin_bottom = 4.0
+
+[node name="Description Panel" type="Panel" parent="."]
+margin_top = 8.0
+margin_right = 40.0
+margin_bottom = 8.0
