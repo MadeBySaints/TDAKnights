@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Space Probe Journey.ogg-ce73238a7684cb3e515fa7b9c6abe1ea.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Space Probe Journey.ogg"
+dest_files=[ "res://.import/Space Probe Journey.ogg-ce73238a7684cb3e515fa7b9c6abe1ea.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
