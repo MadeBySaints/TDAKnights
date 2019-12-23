@@ -1,13 +1,19 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Assets/Tiles/TileSet.png" type="Texture" id=1]
-
-
+[ext_resource path="res://Assets/Tiles/treeset.png" type="Texture" id=2]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Base TileSet" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 352, 224 )
+
+[node name="Tree Set" type="Sprite" parent="."]
+position = Vector2( 0, 224 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 416, 416 )
