@@ -1,5 +1,5 @@
 # TDAKnights
-Top Down Adventure Knights is a concept game about survival, loot, and teamwork.
+Top Down Adventure Knights is a concept game about survival, loot, and teamwork..
 
 
 This game is in it's early stages and is to be considered incomplete. Most mechanics are missing, and will be implemented over time.
