@@ -86,13 +86,7 @@ points = PoolVector2Array( 23.7997, 7.91616, 26.2223, 9.93498, 26.0877, 13.2997,
 3/autotile/z_index_map = [  ]
 3/occluder_offset = Vector2( 0, 0 )
 3/navigation_offset = Vector2( 0, 0 )
-3/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": null,
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+3/shapes = [  ]
 3/z_index = 0
 4/name = "Autotile Dirt"
 4/texture = ExtResource( 1 )
