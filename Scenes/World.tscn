@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Resources/Tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/Sprites/Environment/Tree1.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Resources/HouseParts.tres" type="TileSet" id=3]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 8 )
@@ -42,11 +43,65 @@ offset = Vector2( 8, -8 )
 position = Vector2( 8, -8 )
 shape = SubResource( 1 )
 
+[node name="Tree2" type="StaticBody2D" parent="World/Vegetation/Trees"]
+editor/display_folded = true
+position = Vector2( 48, -32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="World/Vegetation/Trees/Tree2"]
+texture = ExtResource( 2 )
+offset = Vector2( 8, -8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Vegetation/Trees/Tree2"]
+position = Vector2( 8, -8 )
+shape = SubResource( 1 )
+
+[node name="Tree3" type="StaticBody2D" parent="World/Vegetation/Trees"]
+editor/display_folded = true
+position = Vector2( 16, -32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="World/Vegetation/Trees/Tree3"]
+texture = ExtResource( 2 )
+offset = Vector2( 8, -8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Vegetation/Trees/Tree3"]
+position = Vector2( 8, -8 )
+shape = SubResource( 1 )
+
+[node name="Tree4" type="StaticBody2D" parent="World/Vegetation/Trees"]
+editor/display_folded = true
+position = Vector2( 32, -16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="World/Vegetation/Trees/Tree4"]
+texture = ExtResource( 2 )
+offset = Vector2( 8, -8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Vegetation/Trees/Tree4"]
+position = Vector2( 8, -8 )
+shape = SubResource( 1 )
+
 [node name="Sub Tile Layer" type="TileMap" parent="World"]
 z_index = -1
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
 
-[node name="Player Instance" parent="." instance=ExtResource( 3 )]
-position = Vector2( 103.443, 46.0489 )
+[node name="Buildings" type="Node2D" parent="World"]
+
+[node name="Houses" type="YSort" parent="World/Buildings"]
+
+[node name="TileMap" type="TileMap" parent="World/Buildings/Houses"]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+format = 1
+
+[node name="Player Instance" parent="." instance=ExtResource( 4 )]
+position = Vector2( 112, 48 )
