@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Resources/Tileset.tres" type="TileSet" id=1]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Sprites/Environment/Tree1.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 8 )
 
 [node name="Game" type="Node"]
 
@@ -21,11 +25,28 @@ tile_data = PoolIntArray( -720909, 4, 327685, -655373, 4, 262144, -589837, 4, 32
 
 [node name="Vegetation" type="Node2D" parent="World"]
 
+[node name="Trees" type="YSort" parent="World/Vegetation"]
+
+[node name="Tree1" type="StaticBody2D" parent="World/Vegetation/Trees"]
+editor/display_folded = true
+position = Vector2( 0, -16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="World/Vegetation/Trees/Tree1"]
+texture = ExtResource( 2 )
+offset = Vector2( 8, -8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Vegetation/Trees/Tree1"]
+position = Vector2( 8, -8 )
+shape = SubResource( 1 )
+
 [node name="Sub Tile Layer" type="TileMap" parent="World"]
 z_index = -1
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
 
-[node name="Player Instance" parent="." instance=ExtResource( 2 )]
+[node name="Player Instance" parent="." instance=ExtResource( 3 )]
 position = Vector2( 103.443, 46.0489 )
