@@ -15,9 +15,13 @@ func _ready():
 #		#get nearest enemy and if within range attack with equipped weapon.
 #		pass
 
+func _process(delta):
+	pass
+
 func _physics_process(delta):
 	
 	velocity = move_and_slide(velocity.normalized() / delta)
+	
 	#check vertical movement
 	if Input.is_action_pressed("MoveDown"):
 		velocity.y = min(velocity.y + ACCEL * delta, MAX_SPEED)
@@ -57,8 +61,6 @@ func _physics_process(delta):
 			$AnimatedSprite.play("idle down")
 		else:
 			$AnimatedSprite.play("idle down")
-			
-			
 			
 			
 			
