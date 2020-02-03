@@ -5,12 +5,24 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -971.0
 margin_bottom = -644.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Item Icon" type="TextureRect" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 19.0
+margin_top = 18.05
+margin_right = 59.0
+margin_bottom = 58.05
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Item Amount" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_left = 253.0
+margin_top = 17.1
+margin_right = 293.0
+margin_bottom = 58.1
 text = "999"
+align = 2
+valign = 1
