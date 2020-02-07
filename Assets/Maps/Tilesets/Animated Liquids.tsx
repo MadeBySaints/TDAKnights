@@ -274,6 +274,14 @@
    <object id="1" template="../CollisionTemplates/Full.tx" x="0" y="0"/>
   </objectgroup>
  </tile>
+ <tile id="60">
+  <animation>
+   <frame tileid="61" duration="100"/>
+   <frame tileid="62" duration="100"/>
+   <frame tileid="63" duration="100"/>
+   <frame tileid="62" duration="100"/>
+  </animation>
+ </tile>
  <tile id="64">
   <animation>
    <frame tileid="65" duration="100"/>
@@ -328,6 +336,14 @@
    <frame tileid="112" duration="100"/>
   </animation>
  </tile>
+ <tile id="80">
+  <animation>
+   <frame tileid="81" duration="100"/>
+   <frame tileid="82" duration="100"/>
+   <frame tileid="83" duration="100"/>
+   <frame tileid="82" duration="100"/>
+  </animation>
+ </tile>
  <tile id="84">
   <animation>
    <frame tileid="85" duration="100"/>
@@ -369,6 +385,14 @@
   <objectgroup draworder="index" id="2">
    <object id="1" template="../CollisionTemplates/Full.tx" x="0" y="0"/>
   </objectgroup>
+ </tile>
+ <tile id="100">
+  <animation>
+   <frame tileid="101" duration="100"/>
+   <frame tileid="102" duration="100"/>
+   <frame tileid="103" duration="100"/>
+   <frame tileid="102" duration="100"/>
+  </animation>
  </tile>
  <tile id="104">
   <animation>
