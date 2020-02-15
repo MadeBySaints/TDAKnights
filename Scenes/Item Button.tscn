@@ -26,3 +26,11 @@ margin_bottom = 58.1
 text = "999"
 align = 2
 valign = 1
+
+[node name="Item Name" type="Label" parent="."]
+margin_left = 75.0
+margin_top = 23.0
+margin_right = 227.0
+margin_bottom = 52.0
+text = "Item Name"
+valign = 1

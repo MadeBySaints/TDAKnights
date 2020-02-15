@@ -10,14 +10,6 @@ var last_dir
 func _ready():
 	pass
 
-#func _input(event):
-#	if event.is_action_pressed("Attack"):
-#		#get nearest enemy and if within range attack with equipped weapon.
-#		pass
-
-func _process(delta):
-	pass
-
 func _physics_process(delta):
 	
 	velocity = move_and_slide(velocity.normalized() / delta)
@@ -61,13 +53,5 @@ func _physics_process(delta):
 			$AnimatedSprite.play("idle down")
 		else:
 			$AnimatedSprite.play("idle down")
-			
-			
-			
-			
-			
-			
-			
-			
 			
 		

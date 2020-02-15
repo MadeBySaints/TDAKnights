@@ -151,6 +151,11 @@
    <object id="1" template="../CollisionTemplates/Full.tx" x="0" y="0"/>
   </objectgroup>
  </tile>
+ <tile id="112">
+  <objectgroup draworder="index" id="2">
+   <object id="1" template="../CollisionTemplates/Full.tx" x="0" y="0"/>
+  </objectgroup>
+ </tile>
  <tile id="113">
   <objectgroup draworder="index" id="2">
    <object id="1" template="../CollisionTemplates/Full.tx" x="0" y="0"/>
