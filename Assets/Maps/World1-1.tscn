@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Maps/Tilesets/Terrains.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/World Props/Green Pine Group.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Scenes/World Props/Small Pine Group.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/World Props/Small Pine.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/World Props/Tall Oak.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/World Props/Small Dead Tree.tscn" type="PackedScene" id=10]
 
 [node name="South Henswood Forest" type="Node"]
 
@@ -44,6 +45,21 @@ tile_data = PoolIntArray( -2162652, 0, 0, -2162651, 0, 1, -2162650, 0, 1, -21626
 
 [node name="Tall Oak" parent="World Objects/Trees" instance=ExtResource( 9 )]
 position = Vector2( 640, 512 )
+
+[node name="Small Dead Tree" parent="World Objects/Trees" instance=ExtResource( 10 )]
+position = Vector2( -80, 96 )
+
+[node name="Small Dead Tree2" parent="World Objects/Trees" instance=ExtResource( 10 )]
+position = Vector2( 208, 784 )
+
+[node name="Small Dead Tree3" parent="World Objects/Trees" instance=ExtResource( 10 )]
+position = Vector2( 640, -48 )
+
+[node name="Small Dead Tree4" parent="World Objects/Trees" instance=ExtResource( 10 )]
+position = Vector2( 944, 496 )
+
+[node name="Small Dead Tree5" parent="World Objects/Trees" instance=ExtResource( 10 )]
+position = Vector2( 416, 656 )
 
 [node name="Green Pine Group" parent="World Objects/Trees" instance=ExtResource( 2 )]
 position = Vector2( 64, 192 )
