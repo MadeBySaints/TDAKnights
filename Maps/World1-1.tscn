@@ -1,9 +1,8 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scenes/World Props/Small Pine.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/World Props/Tall Oak.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/World Props/Blue Pine Group.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/World Props/Small Pine Group.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/World Props/Tree Stump 1 Group.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/World Props/Green Pine Group.tscn" type="PackedScene" id=7]
@@ -858,5 +857,5 @@ position = Vector2( -208, 512 )
 [node name="Small Pine Group11" parent="World Objects/Trees" instance=ExtResource( 5 )]
 position = Vector2( -176, -80 )
 
-[node name="Player" parent="World Objects" instance=ExtResource( 4 )]
-position = Vector2( 1936, 304 )
+[node name="spawn1" type="Node2D" parent="World Objects"]
+position = Vector2( 1936.27, 302.442 )
