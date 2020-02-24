@@ -1,6 +1,7 @@
 [gd_resource type="TileSet" load_steps=24 format=2]
 
-[ext_resource path="res://Assets/Maps/Tilesets/CliffMasks.png" type="Texture" id=1]
+[ext_resource path="res://Maps/Tilesets/CliffMasks.png" type="Texture" id=1]
+
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 16, 4, 4, 16, 0, 16, 4, 7, 7, 4, 16 )
