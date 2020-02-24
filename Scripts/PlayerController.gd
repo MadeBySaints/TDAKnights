@@ -12,7 +12,8 @@ func _ready():
 
 func _physics_process(delta):
 	
-	velocity = move_and_slide(velocity.normalized() / delta)
+	velocity = move_and_slide(velocity)
+	#velocity = move_and_slide(velocity.normalized() / delta)
 	
 	#check vertical movement
 	if Input.is_action_pressed("MoveDown"):
