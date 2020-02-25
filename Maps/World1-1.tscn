@@ -895,4 +895,4 @@ position = Vector2( -208, 512 )
 position = Vector2( -176, -80 )
 
 [node name="spawn1" type="Node2D" parent="World Objects"]
-position = Vector2( 1936.27, 302.442 )
+position = Vector2( 1440, 224 )
