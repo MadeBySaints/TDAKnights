@@ -20,7 +20,7 @@ func start_game():
 	global.player = load("res://Scenes/Player.tscn").instance()
 	global.player.init()
 	add_child(global.map)
-	add_child(global.player)
+	global.map.get_node("World Objects").add_child(global.player)
 	global.player.set_position(global.map.get_node(global.last_checkpoint).get_position())
 
 func load_game():
