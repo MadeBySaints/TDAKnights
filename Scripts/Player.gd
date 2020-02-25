@@ -14,7 +14,6 @@ func _process(_delta):
 func _input(_ev):
 	if Input.is_key_pressed(KEY_K):
 		health = 0
-	print_debug(health)
 
 func init():
 	pass
