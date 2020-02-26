@@ -523,55 +523,19 @@ position = Vector2( 1424, -224 )
 position = Vector2( 1216, -48 )
 
 [node name="Medium Oak Group29" parent="World Objects/Trees" instance=ExtResource( 10 )]
-position = Vector2( 1088, 16 )
-
-[node name="Medium Oak Group2" parent="World Objects/Trees" instance=ExtResource( 10 )]
 position = Vector2( 1184, 0 )
 
-[node name="Medium Oak Group3" parent="World Objects/Trees" instance=ExtResource( 10 )]
-position = Vector2( 1152, 48 )
+[node name="Medium Oak Group132" parent="World Objects/Trees" instance=ExtResource( 10 )]
+position = Vector2( 1088, -16 )
 
-[node name="Medium Oak Group4" parent="World Objects/Trees" instance=ExtResource( 10 )]
-position = Vector2( 1056, 64 )
+[node name="Medium Oak Group133" parent="World Objects/Trees" instance=ExtResource( 10 )]
+position = Vector2( 992, -32 )
 
-[node name="Medium Oak Group5" parent="World Objects/Trees" instance=ExtResource( 10 )]
-position = Vector2( 1024, 112 )
+[node name="Medium Oak Group134" parent="World Objects/Trees" instance=ExtResource( 10 )]
+position = Vector2( 928, -96 )
 
-[node name="Medium Oak Group6" parent="World Objects/Trees" instance=ExtResource( 10 )]
-position = Vector2( 992, 160 )
-
-[node name="Medium Oak Group7" parent="World Objects/Trees" instance=ExtResource( 10 )]
-position = Vector2( 960, 208 )
-
-[node name="Medium Oak Group8" parent="World Objects/Trees" instance=ExtResource( 10 )]
-position = Vector2( 864, 224 )
-
-[node name="Medium Oak Group9" parent="World Objects/Trees" instance=ExtResource( 10 )]
-position = Vector2( 768, 208 )
-
-[node name="Medium Oak Group10" parent="World Objects/Trees" instance=ExtResource( 10 )]
-position = Vector2( 736, 160 )
-
-[node name="Medium Oak Group11" parent="World Objects/Trees" instance=ExtResource( 10 )]
-position = Vector2( 896, 176 )
-
-[node name="Medium Oak Group12" parent="World Objects/Trees" instance=ExtResource( 10 )]
-position = Vector2( 768, 112 )
-
-[node name="Medium Oak Group13" parent="World Objects/Trees" instance=ExtResource( 10 )]
-position = Vector2( 800, 64 )
-
-[node name="Medium Oak Group14" parent="World Objects/Trees" instance=ExtResource( 10 )]
-position = Vector2( 832, 16 )
-
-[node name="Medium Oak Group15" parent="World Objects/Trees" instance=ExtResource( 10 )]
-position = Vector2( 864, -32 )
-
-[node name="Medium Oak Group16" parent="World Objects/Trees" instance=ExtResource( 10 )]
-position = Vector2( 832, 272 )
-
-[node name="Medium Oak Group17" parent="World Objects/Trees" instance=ExtResource( 10 )]
-position = Vector2( 736, 256 )
+[node name="Medium Oak Group135" parent="World Objects/Trees" instance=ExtResource( 10 )]
+position = Vector2( 896, -48 )
 
 [node name="Medium Oak Group18" parent="World Objects/Trees" instance=ExtResource( 10 )]
 position = Vector2( 832, -80 )
