@@ -5,10 +5,15 @@ extends Node
 # var a = 2
 # var b = "text"
 
+#this script probably not nessary
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var result = get_tree().change_scene("res://Scenes/Server.tscn")
+	#should probably handle error if returned
+	
+	if(result != OK):
+		print("Yikes: " + result)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

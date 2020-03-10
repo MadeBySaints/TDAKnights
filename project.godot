@@ -28,12 +28,18 @@ _global_script_classes=[ {
 "class": "PlayerController",
 "language": "GDScript",
 "path": "res://Scripts/PlayerController.gd"
+}, {
+"base": "Node",
+"class": "Server",
+"language": "GDScript",
+"path": "res://Server/Server.gd"
 } ]
 _global_script_class_icons={
 "ItemDatabase": "",
 "Main": "",
 "Player": "",
-"PlayerController": ""
+"PlayerController": "",
+"Server": ""
 }
 
 [application]

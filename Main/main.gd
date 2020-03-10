@@ -13,18 +13,21 @@ func _ready():
 	
 	#If the server tag is not found then the application is a client
 	
+	var result
+	
 	if(OS.has_feature("Server")):
 		print("is server")
-		#instantiate and run server
+		#make the server the main scene
+		
+		result = get_tree().change_scene("res://Scenes/Server.tscn")
+		
 	else:
 		print("is client")
 		#probably check whether or not to run a test server here
-		var result = get_tree().change_scene("res://Scenes/Game.tscn")
-		#should probably handle error if returned
-		
-		if(result != OK):
-			print("Yikes: " + result)
-
+		result = get_tree().change_scene("res://Scenes/Game.tscn")
+	
+	if(result != OK):
+		print("Yikes: " + result)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
