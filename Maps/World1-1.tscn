@@ -43,10 +43,10 @@ tile_data = PoolIntArray( -1310711, 13, 65536, -1310710, 13, 65537, -1310709, 13
 position = Vector2( 192, 64 )
 
 [node name="Blue Pine" parent="World Objects" instance=ExtResource( 3 )]
-position = Vector2( 96, 64 )
+position = Vector2( -16, 48 )
 
 [node name="Blue Pine2" parent="World Objects" instance=ExtResource( 3 )]
-position = Vector2( 96, 64 )
+position = Vector2( 160, 112 )
 
 [node name="Blue Pine3" parent="World Objects" instance=ExtResource( 3 )]
 position = Vector2( 288, 80 )
@@ -58,4 +58,4 @@ position = Vector2( 176, -112 )
 position = Vector2( -32, -144 )
 
 [node name="Blue Pine6" parent="World Objects" instance=ExtResource( 3 )]
-position = Vector2( 288, -96 )
+position = Vector2( 304, -96 )
