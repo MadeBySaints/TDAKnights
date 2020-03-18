@@ -3,7 +3,7 @@
 [ext_resource path="res://Maps/Tilesets/Trees1.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 6, 5 )
+extents = Vector2( 8, 5 )
 
 [node name="Green Pine" type="Node2D"]
 __meta__ = {
