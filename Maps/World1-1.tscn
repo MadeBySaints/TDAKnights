@@ -2,9 +2,9 @@
 
 [ext_resource path="res://Maps/Tilesets/Terrains.tres" type="TileSet" id=1]
 [ext_resource path="res://Maps/Tilesets/Props.tres" type="TileSet" id=2]
-[ext_resource path="res://Scenes/World Props/Blue Pine.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/World Props/Green Pine Group.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/World Props/Tree Stump 1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Core/Prop Scenes/Blue Pine.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Core/Prop Scenes/Green Pine Group.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Core/Prop Scenes/Tree Stump 1.tscn" type="PackedScene" id=5]
 
 [node name="Henswood Forest" type="Node"]
 

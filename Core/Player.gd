@@ -18,12 +18,12 @@ func _input(_ev):
 func init():
 	pass
 
-func respwan():
+func respawn():
 	health = max_health
 	set_position(global.map.get_node(global.last_checkpoint).get_position())
 	pass
 
 func death():
 	# make corpse and despwan it
-	respwan()
+	respawn()
 	pass

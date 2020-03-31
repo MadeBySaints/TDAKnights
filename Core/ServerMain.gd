@@ -9,7 +9,7 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var result = get_tree().change_scene("res://Scenes/Server.tscn")
+	var result = get_tree().change_scene("res://Core/Server.tscn")
 	#should probably handle error if returned
 	
 	if(result != OK):

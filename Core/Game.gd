@@ -2,7 +2,7 @@ extends Node
 
 func _ready():
 	global.main = self
-	global.main_menu = load("res://Scenes/TitleScreen.tscn").instance()
+	global.main_menu = load("res://Core/TitleScreen.tscn").instance()
 	reload_game()
 	add_child(global.main_menu)
 
@@ -17,7 +17,7 @@ func _notification(what):
 
 func start_game():
 	global.map = load("res://Maps/World1-1.tscn").instance()
-	global.player = load("res://Scenes/Player.tscn").instance()
+	global.player = load("res://Core/Player.tscn").instance()
 	global.player.init()
 	add_child(global.map)
 	global.map.get_node("World Objects").add_child(global.player)
@@ -26,7 +26,7 @@ func start_game():
 func load_game():
 	var savegame = File.new()
 	if(!savegame.file_exists("user://savegame.save")):
-		global.player = load("res://Scenes/Player.tscn").instance()
+		global.player = load("res://Core/Player.tscn").instance()
 		return
 #	var savenodes = get_tree().get_nodes_in_group("Persist")
 #	for i in savenodes:

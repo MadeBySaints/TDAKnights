@@ -19,12 +19,12 @@ func _ready():
 		print("is server")
 		#make the server the main scene
 		
-		result = get_tree().change_scene("res://Scenes/Server.tscn")
+		result = get_tree().change_scene("res://Core/Server.tscn")
 		
 	else:
 		print("is client")
 		#probably check whether or not to run a test server here
-		result = get_tree().change_scene("res://Scenes/Game.tscn")
+		result = get_tree().change_scene("res://Core/Game.tscn")
 	
 	if(result != OK):
 		print("Yikes: " + result)

@@ -12,27 +12,27 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "ItemDatabase",
 "language": "GDScript",
-"path": "res://Scripts/ItemDB.gd"
+"path": "res://Core/ItemDB.gd"
 }, {
 "base": "Node",
 "class": "Main",
 "language": "GDScript",
-"path": "res://Main/main.gd"
+"path": "res://Core/Main/main.gd"
 }, {
 "base": "PlayerController",
 "class": "Player",
 "language": "GDScript",
-"path": "res://Scripts/Player.gd"
+"path": "res://Core/Player.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "PlayerController",
 "language": "GDScript",
-"path": "res://Scripts/PlayerController.gd"
+"path": "res://Core/PlayerController.gd"
 }, {
 "base": "Node",
 "class": "Server",
 "language": "GDScript",
-"path": "res://Server/Server.gd"
+"path": "res://Core/Server.gd"
 } ]
 _global_script_class_icons={
 "ItemDatabase": "",
@@ -45,12 +45,12 @@ _global_script_class_icons={
 [application]
 
 config/name="TDA Knights"
-run/main_scene="res://Main/main.tscn"
+run/main_scene="res://Core/Main/main.tscn"
 config/icon="res://Sprites/GameIcon.png"
 
 [autoload]
 
-global="*res://Scripts/Global.gd"
+global="*res://Core/Global.gd"
 
 [display]
 
