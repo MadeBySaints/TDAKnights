@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Maps/Tilesets/Terrains.tres" type="TileSet" id=1]
 [ext_resource path="res://Maps/Tilesets/Props.tres" type="TileSet" id=2]
-[ext_resource path="res://Core/Prop Scenes/Blue Pine.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Core/Prop Scenes/Green Pine Group.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Core/Prop Scenes/Tree Stump 1.tscn" type="PackedScene" id=5]
 
@@ -50,24 +49,6 @@ tile_data = PoolIntArray( -327628, 0, 0 )
 
 [node name="spawn1" type="Node2D" parent="World Objects"]
 position = Vector2( 784, -64 )
-
-[node name="Blue Pine" parent="World Objects" instance=ExtResource( 3 )]
-position = Vector2( -16, 48 )
-
-[node name="Blue Pine2" parent="World Objects" instance=ExtResource( 3 )]
-position = Vector2( 160, 112 )
-
-[node name="Blue Pine3" parent="World Objects" instance=ExtResource( 3 )]
-position = Vector2( 288, 80 )
-
-[node name="Blue Pine4" parent="World Objects" instance=ExtResource( 3 )]
-position = Vector2( 176, -112 )
-
-[node name="Blue Pine5" parent="World Objects" instance=ExtResource( 3 )]
-position = Vector2( -32, -144 )
-
-[node name="Blue Pine6" parent="World Objects" instance=ExtResource( 3 )]
-position = Vector2( 304, -96 )
 
 [node name="Trees" parent="World Objects" instance=ExtResource( 4 )]
 position = Vector2( 496, 48 )
