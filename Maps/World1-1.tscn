@@ -44,7 +44,7 @@ format = 1
 [node name="World Objects" type="YSort" parent="."]
 
 [node name="spawn1" type="Node2D" parent="World Objects"]
-position = Vector2( 784, -64 )
+position = Vector2( 80, 112 )
 
 [node name="Trees" type="YSort" parent="World Objects"]
 
