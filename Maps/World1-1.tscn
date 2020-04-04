@@ -212,6 +212,114 @@ position = Vector2( 816, -208 )
 [node name="Trees14" parent="World Objects/Trees" instance=ExtResource( 4 )]
 position = Vector2( 832, -256 )
 
+[node name="Trees53" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 1120, -1376 )
+
+[node name="Trees54" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 1104, -1424 )
+
+[node name="Trees55" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 1056, -1408 )
+
+[node name="Trees56" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 1040, -1456 )
+
+[node name="Trees57" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 992, -1440 )
+
+[node name="Trees58" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 1008, -1392 )
+
+[node name="Trees59" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 960, -1376 )
+
+[node name="Trees60" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 944, -1424 )
+
+[node name="Trees61" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 624, -1168 )
+
+[node name="Trees62" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 576, -1152 )
+
+[node name="Trees63" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 528, -1136 )
+
+[node name="Trees64" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 480, -1120 )
+
+[node name="Trees65" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 432, -1136 )
+
+[node name="Trees66" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 384, -1120 )
+
+[node name="Trees67" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 336, -1136 )
+
+[node name="Trees68" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 640, -1216 )
+
+[node name="Trees69" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 672, -816 )
+
+[node name="Trees76" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 720, -768 )
+
+[node name="Trees77" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 736, -720 )
+
+[node name="Trees78" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 736, -688 )
+
+[node name="Trees79" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 1472, -880 )
+
+[node name="Trees80" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 1456, -832 )
+
+[node name="Trees81" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 1584, -960 )
+
+[node name="Trees82" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 1408, -1024 )
+
+[node name="Trees83" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 1360, -1040 )
+
+[node name="Trees84" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 1392, -1072 )
+
+[node name="Trees85" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 1632, -976 )
+
+[node name="Trees86" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 1584, -848 )
+
+[node name="Trees87" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 1600, -800 )
+
+[node name="Trees88" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 1552, -784 )
+
+[node name="Trees70" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 624, -800 )
+
+[node name="Trees71" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 576, -784 )
+
+[node name="Trees72" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 528, -800 )
+
+[node name="Trees73" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 480, -816 )
+
+[node name="Trees74" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 432, -832 )
+
+[node name="Trees75" parent="World Objects/Trees" instance=ExtResource( 4 )]
+position = Vector2( 384, -848 )
+
 [node name="Trees15" parent="World Objects/Trees" instance=ExtResource( 4 )]
 position = Vector2( 880, -240 )
 
