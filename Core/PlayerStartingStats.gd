@@ -2,7 +2,7 @@ extends Resource
 
 class_name StartingStats
 
-export var job_name : String = "Class"
+export var job_name : String = "Job"
 
 #player stats
 export var strength : int
