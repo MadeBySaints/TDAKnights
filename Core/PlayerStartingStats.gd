@@ -29,6 +29,10 @@ export var base_mana_on_kill : int
 #trackers
 var total_hours
 var items_sold : int
+var items_consumed : int
+var items_crafted : int
+var items_recycled : int
+var items_refined : int
 var pve_kills : int
 var pvp_kills : int
 var bestiary_score : int
