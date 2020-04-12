@@ -14,9 +14,10 @@ var coin = [
 	{id = 500, name = "Copper Coin", baseVal = 1, img = null},
 	{id = 501, name = "Silver Coin", baseVal = 100, img = null},
 	{id = 502, name = "Gold Coin", baseVal = 10000, img = null},
-	{id = 503, name = "Crypt Coin", baseVal = 0, img = null},
-	{id = 504, name = "Dragon Coin", baseVal = 0, img = null},
-	{id = 505, name = "Shard", baseVal = 0, img = null}
+	{id = 503, name = "Platinum Coin", baseVal = 1000000, img = null},
+	{id = 504, name = "Crypt Coin", baseVal = 0, img = null},
+	{id = 505, name = "Dragon Coin", baseVal = 0, img = null},
+	{id = 506, name = "Shard", baseVal = 0, img = null}
 ]
 
 
