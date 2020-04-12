@@ -58,18 +58,21 @@ var consumable = [
 
 #4000-4999 = Components (for crafting with blueprints, made from refined mats and other items)
 var component = [
-	{id = 4000, name = "Bow String", baseVal= 6, craft = [
+	{id = 4000, name = "Jute Bow String", stack = 1, baseVal = 2, img = null, craft = [
 		{id = 6000, amt = 2}
 	]},
-	{id = 4001, name = "Wood Bow Frame", baseVal= 6, craft = [
+	{id = 4001, name = "Wood Bow Frame", stack = 1, baseVal = 2, img = null, craft = [
 		{id = 6015, amt = 3}
 	]},
-	{id = 4002, name = "Wood Arrow Shaft", baseVal= 6, craft = [
+	{id = 4002, name = "Wood Arrow Shaft", stack = 10, baseVal = 1, img = null, craft = [
 		{id = 6005, amt = 2}
 	]},
-	{id = 4003, name = "Stone Arrow Head", baseVal= 6, craft = [
-		{id = 6001, amt = 2}
+	{id = 4003, name = "Stone Arrow Head", stack = 10, baseVal = 1, img = null, craft = [
+		{id = 5000, amt = 2}
 	]},
+	{id = 4004, name = "Flint Arrow Head", stack = 10, baseVal = 1.5, img = null, craft = [
+		{id = 5020, amt = 10}
+	]}
 ]
 
 #5000-5999 = Raw Materials
@@ -92,7 +95,9 @@ var rawMat = [
 	{id = 5015, name = "Tin Ore", baseVal = 1, weight = 1, img = null},
 	{id = 5016, name = "Platinum Ore", baseVal = 1, weight = 1, img = null},
 	{id = 5017, name = "Cobalt Ore", baseVal = 1, weight = 1, img = null},
-	{id = 5018, name = "Mithril Ore", baseVal = 1, weight = 1, img = null}
+	{id = 5018, name = "Mithril Ore", baseVal = 1, weight = 1, img = null},
+	{id = 5019, name = "Feather", baseVal = 1, weight = 0.01, img = null},
+	{id = 5020, name = "Flint", baseVal = 1, weight = 1, img = null}
 ]
 
 #6000-6999 = Refined Materials (crafted from raw mats)
@@ -145,6 +150,12 @@ var refinedMat = [
 	]},
 	{id = 6015, name = "Shaped Wood", baseVal = 3, weight = 1, img = null, craft = [
 		{id = 5005, amt = 3}
+	]},
+	{id = 6016, name = "Coal", baseVal = 3, weight = 1, img = null, craft = [
+		{id = 5003, amt = 2}
+	]},
+	{id = 6017, name = "Glass", baseVal = 3, weight = 1, img = null, craft = [
+		{id = 5007, amt = 3}
 	]}
 ]
 
