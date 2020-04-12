@@ -8,6 +8,7 @@ extents = Vector2( 16, 10 )
 [node name="Stone Node" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 0, 10 )
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D"]
 position = Vector2( 0, -32 )

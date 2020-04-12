@@ -9,9 +9,16 @@ class_name ItemDatabase
 #is introduced to the game.
 
 
+#500-999 = Misc
 
-
-
+var coin = [
+	{id = 500, name = "Copper Coin", img = null},
+	{id = 501, name = "Silver Coin", img = null},
+	{id = 502, name = "Gold Coin", img = null},
+	{id = 503, name = "Crypt Coin", img = null},
+	{id = 504, name = "Dragon Coin", img = null},
+	{id = 505, name = "Shard", img = null}
+]
 
 
 
@@ -52,32 +59,32 @@ var consumable = [
 
 #4000-4999 = Ingredients/Components (made from refined mats and other items)
 var component = [
-	{id = 4000, name = "Bow String", baseVal= 6, recycle = [
+	{id = 4000, name = "Bow String", baseVal= 6, craft = [
 		{id = 6000, amt = 2}
 	]}
 ]
 
 #5000-5999 = Raw Materials
 var rawMat = [
-	{id = 5000, name = "Stone", baseVal = 1},
-	{id = 5001, name = "Plant Fiber", baseVal = 1},
-	{id = 5002, name = "Iron Ore", baseVal = 1},
-	{id = 5003, name = "Coal Ore", baseVal = 1},
-	{id = 5004, name = "Sulfur Ore", baseVal = 1},
-	{id = 5005, name = "Wood", baseVal = 1},
-	{id = 5006, name = "Hide", baseVal = 1},
-	{id = 5007, name = "Sand", baseVal = 1},
-	{id = 5008, name = "Silver Ore", baseVal = 1},
-	{id = 5009, name = "Gold Ore", baseVal = 1},
-	{id = 5010, name = "Silicon Ore", baseVal = 1},
-	{id = 5011, name = "Magnesium Ore", baseVal = 1},
-	{id = 5012, name = "Raw Carbon", baseVal = 1},
-	{id = 5013, name = "Bone", baseVal = 1}
+	{id = 5000, name = "Stone", baseVal = 1, img = null},
+	{id = 5001, name = "Plant Fiber", baseVal = 1, img = null},
+	{id = 5002, name = "Iron Ore", baseVal = 1, img = null},
+	{id = 5003, name = "Coal Ore", baseVal = 1, img = null},
+	{id = 5004, name = "Sulfur Ore", baseVal = 1, img = null},
+	{id = 5005, name = "Wood", baseVal = 1, img = null},
+	{id = 5006, name = "Hide", baseVal = 1, img = null},
+	{id = 5007, name = "Sand", baseVal = 1, img = null},
+	{id = 5008, name = "Silver Ore", baseVal = 1, img = null},
+	{id = 5009, name = "Gold Ore", baseVal = 1, img = null},
+	{id = 5010, name = "Silicon Ore", baseVal = 1, img = null},
+	{id = 5011, name = "Magnesium Ore", baseVal = 1, img = null},
+	{id = 5012, name = "Raw Carbon", baseVal = 1, img = null},
+	{id = 5013, name = "Bone", baseVal = 1, img = null}
 ]
 
 #6000-6999 = Refined Materials (made from raw mats)
 var refinedMat = [
-	{id = 6000, name = "Jute Twine", baseVal = 3, recycle = [
+	{id = 6000, name = "Jute Twine", baseVal = 3, craft = [
 		{id = 5001 , amt = 3}
 	]}
 ]

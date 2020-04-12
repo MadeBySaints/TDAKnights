@@ -21,7 +21,7 @@ height = 12.0
 [node name="Floating Crystal" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 5, -9 )
+position = Vector2( 0, -9 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="StaticBody2D"]
 frames = SubResource( 1 )
