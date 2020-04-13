@@ -9,6 +9,16 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Area2D",
+"class": "Detection",
+"language": "GDScript",
+"path": "res://Core/Enemy Detection.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "EnemyController",
+"language": "GDScript",
+"path": "res://Core/Enemy Movement.gd"
+}, {
 "base": "Node",
 "class": "ItemDatabase",
 "language": "GDScript",
@@ -45,6 +55,8 @@ _global_script_classes=[ {
 "path": "res://Core/PlayerStartingStats.gd"
 } ]
 _global_script_class_icons={
+"Detection": "",
+"EnemyController": "",
 "ItemDatabase": "",
 "Job": "",
 "Main": "",
