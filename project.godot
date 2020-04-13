@@ -15,6 +15,11 @@ _global_script_classes=[ {
 "path": "res://Core/ItemDB.gd"
 }, {
 "base": "Node",
+"class": "Job",
+"language": "GDScript",
+"path": "res://Core/Job.gd"
+}, {
+"base": "Node",
 "class": "Main",
 "language": "GDScript",
 "path": "res://Core/Main/main.gd"
@@ -33,13 +38,20 @@ _global_script_classes=[ {
 "class": "Server",
 "language": "GDScript",
 "path": "res://Core/Server.gd"
+}, {
+"base": "Resource",
+"class": "StartingStats",
+"language": "GDScript",
+"path": "res://Core/PlayerStartingStats.gd"
 } ]
 _global_script_class_icons={
 "ItemDatabase": "",
+"Job": "",
 "Main": "",
 "Player": "",
 "PlayerController": "",
-"Server": ""
+"Server": "",
+"StartingStats": ""
 }
 
 [application]

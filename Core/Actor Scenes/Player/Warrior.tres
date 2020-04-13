@@ -1,0 +1,24 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Core/PlayerStartingStats.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+job_name = "Warrior"
+strength = 5
+dexterity = 1
+intelligence = 1
+wisdom = 1
+base_health = 50
+base_mana = 50
+base_xp_rate = 1.0
+base_attack = 10
+base_defense = 10
+base_speed = 10
+base_dodge = 10
+base_accuracy = 0.95
+base_crit_chance = 0.01
+base_health_regen_rate = 0.0
+base_mana_regen_rate = 0.0
+base_health_on_kill = 0
+base_mana_on_kill = 0
