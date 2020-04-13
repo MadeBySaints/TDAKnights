@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Maps/Tilesets/Terrains.tres" type="TileSet" id=1]
 [ext_resource path="res://Maps/Tilesets/Props.tres" type="TileSet" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Core/Prop Scenes/Floating Crystal.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Core/Prop Scenes/Stone Node1.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Core/Prop Scenes/Coal Node.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Core/Actor Scenes/Mob/Orc 01.tscn" type="PackedScene" id=9]
 
 [node name="Henswood Forest" type="Node"]
 
@@ -75,8 +76,19 @@ tile_data = PoolIntArray( -7536539, 15, 0, -7536538, 15, 1, -7536537, 15, 1, -75
 
 [node name="World Objects" type="YSort" parent="."]
 
-[node name="spawn1" type="Node2D" parent="World Objects"]
+[node name="Actors" type="YSort" parent="World Objects"]
+
+[node name="Players" type="YSort" parent="World Objects/Actors"]
+
+[node name="spawn1" type="Node2D" parent="World Objects/Actors/Players"]
 position = Vector2( 80, 112 )
+
+[node name="Enemies" type="YSort" parent="World Objects/Actors"]
+
+[node name="Orc" parent="World Objects/Actors/Enemies" instance=ExtResource( 9 )]
+position = Vector2( 160, 128 )
+
+[node name="NPCs" type="YSort" parent="World Objects/Actors"]
 
 [node name="Trees" type="YSort" parent="World Objects"]
 position = Vector2( 16, 0 )

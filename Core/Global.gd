@@ -15,7 +15,7 @@ var ui_inventory = null
 
 var menu = null
 
-var last_checkpoint = "World Objects/spawn1"
+var last_checkpoint = "World Objects/Actors/Players/spawn1"
 
 #Stats
 var map = null
