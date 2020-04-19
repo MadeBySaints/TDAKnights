@@ -45,12 +45,13 @@ _global_script_class_icons={
 [application]
 
 config/name="TDA Knights"
-run/main_scene="res://Core/Main/main.tscn"
+run/main_scene="res://Core/Game.tscn"
 config/icon="res://Sprites/GameIcon.png"
 
 [autoload]
 
 global="*res://Core/Global.gd"
+Game_State="*res://Core/Game_State.gd"
 
 [display]
 
