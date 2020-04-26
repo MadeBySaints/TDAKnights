@@ -1,5 +1,7 @@
 extends Node
 
+#class_name Game_State
+
 #Game port and IP
 
 const IP = "127.0.0.1"
@@ -15,6 +17,31 @@ var myName = "Client"
 
 #Players dictionary format: id:name
 var myPlayers = {}
+
+#From Global.gd
+
+var INVENTORY_PATH = "res://inventory/"
+
+var main = null
+var main_menu = null
+
+var ui = null
+var ui_spells = null
+var ui_active_spells = null
+
+var ui_stats_tab = null
+var ui_stats = null
+var ui_inventory = null
+
+var menu = null
+
+var last_checkpoint = "World Objects/spawn1"
+
+#Stats
+var map = null
+var player = null
+
+##
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

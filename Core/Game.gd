@@ -1,10 +1,10 @@
 extends Node
 
 func _ready():
-	global.main = self
-	global.main_menu = load("res://Core/TitleScreen.tscn").instance()
+	Game_State.main = self
+	Game_State.main_menu = load("res://Core/TitleScreen.tscn").instance()
 	reload_game()
-	add_child(global.main_menu)
+	add_child(Game_State.main_menu)
 
 func reload_game():
 	for c in get_children():
@@ -16,17 +16,17 @@ func _notification(what):
 		get_tree().quit()
 
 func start_game():
-	global.map = load("res://Maps/World1-1.tscn").instance()
-	global.player = load("res://Core/Player.tscn").instance()
-	global.player.init()
-	add_child(global.map)
-	global.map.get_node("World Objects").add_child(global.player)
-	global.player.set_position(global.map.get_node(global.last_checkpoint).get_position())
+	Game_State.map = load("res://Maps/World1-1.tscn").instance()
+	Game_State.player = load("res://Core/Player.tscn").instance()
+	Game_State.player.init()
+	add_child(Game_State.map)
+	Game_State.map.get_node("World Objects").add_child(Game_State.player)
+	Game_State.player.set_position(Game_State.map.get_node(Game_State.last_checkpoint).get_position())
 
 func load_game():
 	var savegame = File.new()
 	if(!savegame.file_exists("user://savegame.save")):
-		global.player = load("res://Core/Player.tscn").instance()
+		Game_State.player = load("res://Core/Player.tscn").instance()
 		return
 #	var savenodes = get_tree().get_nodes_in_group("Persist")
 #	for i in savenodes:

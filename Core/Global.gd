@@ -1,3 +1,6 @@
+#This file will be made redundant and eventually removed
+
+
 extends Node
 
 var INVENTORY_PATH = "res://inventory/"

@@ -50,7 +50,6 @@ config/icon="res://Sprites/GameIcon.png"
 
 [autoload]
 
-global="*res://Core/Global.gd"
 Game_State="*res://Core/Game_State.gd"
 
 [display]
