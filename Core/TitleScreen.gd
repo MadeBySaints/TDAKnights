@@ -21,5 +21,16 @@ func _on_Button2_pressed():
 
 
 func _on_Button_pressed():
-	global.main.start_game()
-	pass # Replace with function body.
+	Game_State.main.start_game()
+	
+	#start_game()
+	
+	pass
+	
+#moved from main.gd - oops - main "is" Game
+
+#func start_game():
+#	var result = get_tree().change_scene("res://Core/Game.tscn")
+	
+#	if(result != OK):
+#		print("Yikes: " + result)

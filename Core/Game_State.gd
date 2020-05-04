@@ -38,7 +38,7 @@ var menu = null
 var last_checkpoint = "World Objects/spawn1"
 
 #Stats
-var map = null
+var map = null		#Currently loaded map
 var player = null
 
 ##
@@ -103,4 +103,4 @@ puppet func pre_start_game():
 	#Then add players to the world node at some point
 	
 	rpc_id(1, "post_start_game")
-
+	

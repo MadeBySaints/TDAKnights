@@ -20,7 +20,7 @@ func init():
 
 func respawn():
 	health = max_health
-	set_position(global.map.get_node(global.last_checkpoint).get_position())
+	set_position(Game_State.map.get_node(Game_State.last_checkpoint).get_position())
 	pass
 
 func death():
