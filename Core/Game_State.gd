@@ -102,5 +102,5 @@ puppet func pre_start_game():
 	
 	#Then add players to the world node at some point
 	
-	rpc_id(1, "post_start_game")
+	rpc_id(1, "populate_world")
 	

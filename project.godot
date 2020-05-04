@@ -33,13 +33,19 @@ _global_script_classes=[ {
 "class": "Server",
 "language": "GDScript",
 "path": "res://Core/Server.gd"
+}, {
+"base": "Node",
+"class": "TDAKWorld",
+"language": "GDScript",
+"path": "res://Core/TDAKWorld.gd"
 } ]
 _global_script_class_icons={
 "ItemDatabase": "",
 "Main": "",
 "Player": "",
 "PlayerController": "",
-"Server": ""
+"Server": "",
+"TDAKWorld": ""
 }
 
 [application]
