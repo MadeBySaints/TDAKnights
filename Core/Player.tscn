@@ -3,8 +3,6 @@
 [ext_resource path="res://Core/Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Player/Mage/Mage.png" type="Texture" id=2]
 
-
-
 [sub_resource type="CircleShape2D" id=1]
 
 [sub_resource type="AtlasTexture" id=2]
@@ -21,19 +19,19 @@ region = Rect2( 0, 72, 26, 36 )
 
 [sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 2 )
-region = Rect2( 26, 0, 26, 36 )
+region = Rect2( 26, 108, 26, 36 )
 
 [sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 2 )
-region = Rect2( 26, 36, 26, 36 )
+region = Rect2( 26, 0, 26, 36 )
 
 [sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 2 )
-region = Rect2( 26, 72, 26, 36 )
+region = Rect2( 52, 0, 26, 36 )
 
 [sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 2 )
-region = Rect2( 26, 108, 26, 36 )
+region = Rect2( 0, 0, 26, 36 )
 
 [sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 2 )
@@ -49,27 +47,27 @@ region = Rect2( 0, 36, 26, 36 )
 
 [sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 2 )
-region = Rect2( 26, 108, 26, 36 )
+region = Rect2( 26, 72, 26, 36 )
 
 [sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 2 )
-region = Rect2( 52, 108, 26, 36 )
+region = Rect2( 26, 36, 26, 36 )
 
 [sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 108, 26, 36 )
+region = Rect2( 26, 0, 26, 36 )
 
 [sub_resource type="AtlasTexture" id=15]
 atlas = ExtResource( 2 )
-region = Rect2( 26, 0, 26, 36 )
+region = Rect2( 26, 108, 26, 36 )
 
 [sub_resource type="AtlasTexture" id=16]
 atlas = ExtResource( 2 )
-region = Rect2( 52, 0, 26, 36 )
+region = Rect2( 52, 108, 26, 36 )
 
 [sub_resource type="AtlasTexture" id=17]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 26, 36 )
+region = Rect2( 0, 108, 26, 36 )
 
 [sub_resource type="SpriteFrames" id=18]
 animations = [ {
@@ -80,22 +78,12 @@ animations = [ {
 }, {
 "frames": [ SubResource( 5 ) ],
 "loop": true,
-"name": "idle down",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 6 ) ],
-"loop": true,
-"name": "idle left",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 7 ) ],
-"loop": true,
-"name": "idle right",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 8 ) ],
-"loop": true,
 "name": "idle up",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 6 ), SubResource( 8 ) ],
+"loop": true,
+"name": "walk down",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 9 ), SubResource( 11 ) ],
@@ -103,14 +91,24 @@ animations = [ {
 "name": "walk left",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 12 ), SubResource( 14 ) ],
+"frames": [ SubResource( 12 ) ],
 "loop": true,
-"name": "walk up",
+"name": "idle right",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 13 ) ],
+"loop": true,
+"name": "idle left",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 14 ) ],
+"loop": true,
+"name": "idle down",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 15 ), SubResource( 17 ) ],
 "loop": true,
-"name": "walk down",
+"name": "walk up",
 "speed": 5.0
 } ]
 

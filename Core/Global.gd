@@ -1,5 +1,4 @@
-#This file will be made redundant and eventually removed
-
+#Redundant
 
 extends Node
 

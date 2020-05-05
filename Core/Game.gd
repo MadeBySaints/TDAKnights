@@ -19,9 +19,19 @@ func start_game():
 	Game_State.map = load("res://Maps/World1-1.tscn").instance()
 	Game_State.player = load("res://Core/Player.tscn").instance()
 	#Game_State.player.init() #calling instance should call the players _ready method - https://docs.godotengine.org/en/stable/classes/class_packedscene.html#class-packedscene-method-instance
-	add_child(Game_State.map)
+	#add_child(Game_State.map)
+	
+	#Add map to the "networked root node"
+	
+	Game_State.add_child(Game_State.map)
+	
+	#Precceding and following steps should probably be done in Game_State
+	
 	Game_State.map.get_node("World Objects").add_child(Game_State.player)
+	
 	Game_State.player.set_position(Game_State.map.get_node(Game_State.last_checkpoint).get_position())
+
+
 
 func load_game():
 	var savegame = File.new()

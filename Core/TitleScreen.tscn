@@ -5,6 +5,8 @@
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = 1.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -42,24 +44,31 @@ align = 1
 valign = 1
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 272.317
-margin_top = 348.804
-margin_right = 902.317
-margin_bottom = 493.804
+margin_left = 278.317
+margin_top = 471.804
+margin_right = 908.317
+margin_bottom = 616.804
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Button2"]
 margin_left = 0.604858
-margin_top = 1.6142
+margin_top = -1.3858
 margin_right = 634.605
-margin_bottom = 146.614
+margin_bottom = 143.614
 text = "Load"
 align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ConnectToServerButton" type="Button" parent="."]
+margin_left = 275.0
+margin_top = 309.0
+margin_right = 909.0
+margin_bottom = 455.0
+text = "Connect To Server"
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]

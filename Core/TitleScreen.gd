@@ -21,11 +21,11 @@ func _on_Button2_pressed():
 
 
 func _on_Button_pressed():
-	Game_State.main.start_game()
+	Game_State.main.start_game() #Game.gd
 	
 	#start_game()
 	
-	pass
+	hide()
 	
 #moved from main.gd - oops - main "is" Game
 
@@ -34,3 +34,9 @@ func _on_Button_pressed():
 	
 #	if(result != OK):
 #		print("Yikes: " + result)
+
+func _on_ConnectToServerButton_pressed():
+	
+	
+	
+	pass

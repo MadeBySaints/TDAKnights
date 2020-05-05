@@ -1,6 +1,4 @@
-#Redundant
-
-extends Node2D
+extends Control
 
 
 # Declare member variables here. Examples:

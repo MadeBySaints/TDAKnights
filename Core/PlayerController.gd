@@ -54,5 +54,17 @@ func _physics_process(delta):
 			$AnimatedSprite.play("idle down")
 		else:
 			$AnimatedSprite.play("idle down")
-			
+	
+	#Started work on an in-game menu input
+	
+	#if Input.is_action_pressed("Escape"):
 		
+		#var menu = Game_State.main_menu
+		
+		#if menu.visible:
+		#	menu.hide()
+		#else:
+		#	menu.show()
+		
+	
+

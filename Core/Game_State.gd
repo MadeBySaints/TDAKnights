@@ -1,3 +1,5 @@
+#the "root" network node
+
 extends Node
 
 #class_name Game_State
