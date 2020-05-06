@@ -37,6 +37,12 @@ func _on_Button_pressed():
 
 func _on_ConnectToServerButton_pressed():
 	
+	var connectToServerTSCN = load("res://Core/ConnectToServerScreen.tscn").instance()
 	
+	Game_State.main.remove_child(Game_State.main_menu)
 	
-	pass
+	#get_tree().change_scene("res://Core/ConnectToServer.tscn")
+	
+	Game_State.main.add_child(connectToServerTSCN)
+	
+	#pass

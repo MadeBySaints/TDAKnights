@@ -57,7 +57,7 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func connect_to_server():
+func connect_to_server(ip = IP, port = PORT):
 	var host = NetworkedMultiplayerENet.new()
 	host.create_client(IP, PORT)
 	get_tree().set_network_peer(host)

@@ -72,3 +72,4 @@ margin_bottom = 455.0
 text = "Connect To Server"
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="ConnectToServerButton" to="." method="_on_ConnectToServerButton_pressed"]
