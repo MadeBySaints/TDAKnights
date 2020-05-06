@@ -17,6 +17,9 @@ margin_right = 818.0
 margin_bottom = 532.0
 rect_pivot_offset = Vector2( 251, 218 )
 text = "Connect"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="IPAddressLabel" type="Label" parent="."]
 margin_left = 224.0

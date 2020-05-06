@@ -30,6 +30,8 @@ func start_game():
 	Game_State.map.get_node("World Objects").add_child(Game_State.player)
 	
 	Game_State.player.set_position(Game_State.map.get_node(Game_State.last_checkpoint).get_position())
+	
+	remove_child(Game_State.main_menu)
 
 
 

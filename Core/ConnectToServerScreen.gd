@@ -13,7 +13,8 @@ func _ready():
 	#tree.connect("connected_to_server", self, "on_connected_to_server") #_connected_ok
 	#tree.connect("connection_failed", self, "on_connection_failed")		#_connected_fail
 	Game_State.connect("connected_to_server", self, "on_connected_to_server")
-	Game_State.connect("connection_failed", self, "on_server_disconnected")
+	Game_State.connect("connection_failed", self, "on_connection_failed")
+	Game_State.connect("server_disconnected", self, "on_server_disconnected")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,16 +23,17 @@ func _ready():
 
 func _on_ConnectToServerButton_pressed():
 	
-	
+	Game_State.connect_to_server($IPAddressLineEdit.text, $PortLineEdit.text)
 	
 	pass
 	
 func _on_BackButton_pressed():
 	
-	#"res://Core/ConnectToServer.tscn"
+	#switch out scenes
 	
-	Game_State.connect_to_server($IPAddressLineEdit.text, $PortLineEdit.text)
+	Game_State.main.remove_child(self)
 	
+	Game_State.main.add_child(Game_State.main_menu)
 	
 	pass
 	
@@ -48,6 +50,15 @@ func on_connected_to_server():
 	
 
 
+func on_connection_failed():
+	
+	$OutputLabel.text = "Connection Error"
+	
+	Game_State.disconnect("connected_to_server", self, "on_connected_to_server")
+	Game_State.disconnect("connection_failed", self, "on_connected_to_server")
+	
+	pass
+	
 func on_server_disconnected():
 	
 	$OutputLabel.text = "Connection Error"

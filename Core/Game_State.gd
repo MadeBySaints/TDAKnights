@@ -59,7 +59,18 @@ func _ready():
 
 func connect_to_server(ip = IP, port = PORT):
 	var host = NetworkedMultiplayerENet.new()
-	host.create_client(IP, PORT)
+	
+	#crashes the engine if the is no server to connect to and host is the passed to set_network_peer
+	
+	var result = host.create_client(ip, port)
+	
+	if result != OK:
+		emit_signal("connection_failed")
+		
+		print("connect_to_server - error: " + result)
+		
+		return
+	
 	get_tree().set_network_peer(host)
 	
 #Callback for the SceneTree, called when connected to the server

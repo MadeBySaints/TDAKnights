@@ -25,7 +25,7 @@ func _on_Button_pressed():
 	
 	#start_game()
 	
-	hide()
+	#hide()
 	
 #moved from main.gd - oops - main "is" Game
 
