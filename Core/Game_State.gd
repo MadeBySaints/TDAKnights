@@ -45,6 +45,14 @@ var player = null
 
 ##
 
+var test_call_result : bool = false setget test_call_result_set, test_call_result_get
+
+master func test_call_result_set(new_value):
+	test_call_result = new_value
+
+master func test_call_result_get():
+	return test_call_result
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var tree = get_tree()
@@ -70,8 +78,14 @@ func connect_to_server(ip = IP, port = PORT):
 		print("connect_to_server - error: " + result)
 		
 		return
+		
+	#Can't find a method on NetworkedMultiplayerENet that conveniently allows me to check if a connection works
 	
 	get_tree().set_network_peer(host)
+	
+	#Test connection method call
+	
+	#var test_result : bool = rpc_id(1, "test_call")
 	
 #Callback for the SceneTree, called when connected to the server
 func on_connected_to_server():
