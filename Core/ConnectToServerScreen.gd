@@ -25,6 +25,28 @@ func _on_ConnectToServerButton_pressed():
 	
 	Game_State.connect_to_server($IPAddressLineEdit.text, $PortLineEdit.text)
 	
+	var nmp : NetworkedMultiplayerPeer = Game_State.get_tree().network_peer
+	
+	#Ok, it seemms that when you try to connect to a server that does not exist the network_peer of the scene tree does not get initalised
+	
+	#the connection_status tests may be redundant and there are signals connected to the Game_State node that address the connection state
+	
+	if nmp == null:
+	
+		$OutputLabel.text = "Connection Error"
+		
+	elif nmp.get_connection_status() == NetworkedMultiplayerPeer.CONNECTION_DISCONNECTED:
+		
+		$OutputLabel.text = "NetworkedMultiplayerPeer.CONNECTION_DISCONNECTED"
+		
+	elif nmp.get_connection_status() == NetworkedMultiplayerPeer.CONNECTION_CONNECTING:
+		
+		$OutputLabel.text = "NetworkedMultiplayerPeer.CONNECTION_CONNECTING"
+		
+	elif nmp.get_connection_status() == NetworkedMultiplayerPeer.CONNECTION_CONNECTED:
+		
+		$OutputLabel.text = "NetworkedMultiplayerPeer.CONNECTION_CONNECTED"
+	
 	pass
 	
 func _on_BackButton_pressed():
