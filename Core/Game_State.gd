@@ -10,9 +10,11 @@ const IP = "127.0.0.1"
 
 const PORT = 4200
 
-signal connection_failed()
-signal connection_succeeded()
-signal disconnected_from_server() #server_disconnected
+#removed redundant signals
+
+#signal connection_failed()
+#signal connection_succeeded()
+#signal disconnected_from_server() #server_disconnected
 signal players_updated()
 
 var myName = "Client"
@@ -65,19 +67,23 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func connect_to_server(ip = IP, port = PORT):
+func connect_to_server(ip = IP, port = PORT): #port is apparently not an int which is not what I would have expected
 	var host = NetworkedMultiplayerENet.new()
 	
 	#crashes the engine if the is no server to connect to and host is the passed to set_network_peer
 	
-	var result = host.create_client(ip, port)
+	var result = host.create_client(ip, int(port))
 	
 	if result != OK:
-		emit_signal("connection_failed")
+		#emit_signal("connection_failed")
 		
 		print("connect_to_server - error: " + result)
 		
 		return
+		
+	get_tree().set_network_peer(host)
+	
+	pass
 		
 	#Can't find a method on NetworkedMultiplayerENet that conveniently allows me to check if a connection works
 	
@@ -85,7 +91,7 @@ func connect_to_server(ip = IP, port = PORT):
 	
 	#sTree.set_network_peer(host)
 	
-	get_tree().set_network_peer(host)
+
 	
 	#Test connection method call
 	
@@ -108,7 +114,7 @@ func connect_to_server(ip = IP, port = PORT):
 	
 #Callback for the SceneTree, called when connected to the server
 func on_connected_to_server():
-	emit_signal("connection_succeeded")
+	#emit_signal("connection_succeeded")
 	
 	#register this client with the server
 	rpc_id(1, "register_player", myName)
@@ -122,9 +128,14 @@ func on_server_disconnected():
 	#connect_to_server()
 	
 #Callback for the SceneTree, called when unable to the server
-func on_connection_failed():
-	get_tree().set_network_peer(null)
-	emit_signal("connection_failed")
+
+#~Object: Object [Object:1341] was freed or unreferenced while a signal is being emitted from it. Try connecting to the signal using 'CONNECT_DEFERRED' flag, or use queue_free() to free the object (if this object is a Node) to avoid this error and potential crashes.
+
+#shouldn't need to de-reference of the network peer when the conection fails
+ 
+#func on_connection_failed():
+#	get_tree().set_network_peer(null)
+	#emit_signal("connection_failed")
 
 	#Try to connect again?
 	#connect_to_server()
