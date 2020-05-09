@@ -1,10 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-<<<<<<< HEAD
-[ext_resource path="res://Audio/TitleMusic.ogg" type="AudioStream" id=1]
-=======
 [ext_resource path="res://Audio/Music/TitleMusic.ogg" type="AudioStream" id=1]
->>>>>>> master
 
 [node name="Audio Storage" type="Node"]
 
