@@ -2,8 +2,6 @@
 
 [ext_resource path="res://Core/Prop Scenes/Green Pine.tscn" type="PackedScene" id=1]
 
-
-
 [node name="Trees" type="YSort"]
 
 [node name="Green Pine" parent="." instance=ExtResource( 1 )]

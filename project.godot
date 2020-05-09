@@ -9,10 +9,25 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Area2D",
+"class": "Detection",
+"language": "GDScript",
+"path": "res://Core/Enemy Detection.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "EnemyController",
+"language": "GDScript",
+"path": "res://Core/Enemy Movement.gd"
+}, {
 "base": "Node",
 "class": "ItemDatabase",
 "language": "GDScript",
 "path": "res://Core/ItemDB.gd"
+}, {
+"base": "Node",
+"class": "Job",
+"language": "GDScript",
+"path": "res://Core/Job.gd"
 }, {
 "base": "Node",
 "class": "Main",
@@ -34,18 +49,32 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Core/Server.gd"
 }, {
+<<<<<<< HEAD
 "base": "Node",
 "class": "TDAKWorld",
 "language": "GDScript",
 "path": "res://Core/TDAKWorld.gd"
+=======
+"base": "Resource",
+"class": "StartingStats",
+"language": "GDScript",
+"path": "res://Core/PlayerStartingStats.gd"
+>>>>>>> master
 } ]
 _global_script_class_icons={
+"Detection": "",
+"EnemyController": "",
 "ItemDatabase": "",
+"Job": "",
 "Main": "",
 "Player": "",
 "PlayerController": "",
 "Server": "",
+<<<<<<< HEAD
 "TDAKWorld": ""
+=======
+"StartingStats": ""
+>>>>>>> master
 }
 
 [application]

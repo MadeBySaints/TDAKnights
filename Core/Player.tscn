@@ -4,21 +4,23 @@
 [ext_resource path="res://Sprites/Player/Mage/Mage.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
+radius = 9.0
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 2 )
-region = Rect2( 26, 72, 26, 36 )
+region = Rect2( 26, 108, 26, 36 )
 
 [sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 2 )
-region = Rect2( 52, 72, 26, 36 )
+region = Rect2( 52, 108, 26, 36 )
 
 [sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 72, 26, 36 )
+region = Rect2( 0, 108, 26, 36 )
 
 [sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 2 )
+<<<<<<< HEAD
 region = Rect2( 26, 108, 26, 36 )
 
 [sub_resource type="AtlasTexture" id=6]
@@ -32,21 +34,37 @@ region = Rect2( 52, 0, 26, 36 )
 [sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 26, 36 )
+=======
+region = Rect2( 26, 72, 26, 36 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 52, 72, 26, 36 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 72, 26, 36 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 2 )
+region = Rect2( 26, 36, 26, 36 )
+>>>>>>> master
 
 [sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 2 )
-region = Rect2( 26, 36, 26, 36 )
+region = Rect2( 52, 36, 26, 36 )
 
 [sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 2 )
-region = Rect2( 52, 36, 26, 36 )
+region = Rect2( 0, 36, 26, 36 )
 
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 36, 26, 36 )
+region = Rect2( 26, 0, 26, 36 )
 
 [sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 2 )
+<<<<<<< HEAD
 region = Rect2( 26, 72, 26, 36 )
 
 [sub_resource type="AtlasTexture" id=13]
@@ -68,16 +86,40 @@ region = Rect2( 52, 108, 26, 36 )
 [sub_resource type="AtlasTexture" id=17]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 108, 26, 36 )
+=======
+region = Rect2( 52, 0, 26, 36 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 26, 36 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 2 )
+region = Rect2( 26, 36, 26, 36 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 2 )
+region = Rect2( 26, 72, 26, 36 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 2 )
+region = Rect2( 26, 0, 26, 36 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 2 )
+region = Rect2( 26, 108, 26, 36 )
+>>>>>>> master
 
 [sub_resource type="SpriteFrames" id=18]
 animations = [ {
 "frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 2 ), SubResource( 4 ) ],
 "loop": true,
-"name": "walk right",
+"name": "walk up",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 5 ) ],
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 5 ), SubResource( 7 ) ],
 "loop": true,
+<<<<<<< HEAD
 "name": "idle up",
 "speed": 5.0
 }, {
@@ -102,21 +144,53 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ SubResource( 14 ) ],
+=======
+"name": "walk right",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 8 ), SubResource( 10 ) ],
+"loop": true,
+"name": "walk left",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 11 ), SubResource( 13 ) ],
+"loop": true,
+"name": "walk down",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 14 ) ],
+"loop": true,
+"name": "idle left",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 15 ) ],
+"loop": true,
+"name": "idle right",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 16 ) ],
+>>>>>>> master
 "loop": true,
 "name": "idle down",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 15 ), SubResource( 17 ) ],
+"frames": [ SubResource( 17 ) ],
 "loop": true,
+<<<<<<< HEAD
 "name": "walk up",
+=======
+"name": "idle up",
+>>>>>>> master
 "speed": 5.0
 } ]
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="KinematicBody2D" type="KinematicBody2D" groups=[
+"Player",
+]]
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -9 )
+position = Vector2( 0, -8 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
