@@ -10,8 +10,10 @@
 [ext_resource path="res://Sprites/UI/ninePatchDefault.png" type="Texture" id=8]
 
 [node name="Control" type="Control"]
-margin_right = 302.0
-margin_bottom = 59.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 304.0
+margin_bottom = 61.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -64,7 +66,6 @@ custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_y = 1
 text = "PING:"
 uppercase = true
-percent_visible = -0.2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -80,7 +81,6 @@ custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_y = 1
 text = "FPS:"
-percent_visible = -0.333333
 __meta__ = {
 "_edit_use_anchors_": false
 }
