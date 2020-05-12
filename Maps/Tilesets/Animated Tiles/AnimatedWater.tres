@@ -4,7 +4,6 @@
 [ext_resource path="res://Maps/Tilesets/Animated Tiles/Water3.png" type="Texture" id=2]
 [ext_resource path="res://Maps/Tilesets/Animated Tiles/Water2.png" type="Texture" id=3]
 
-
 [resource]
 frames = 4
 frame_0/texture = ExtResource( 1 )

@@ -65,7 +65,6 @@ tile_data = PoolIntArray( -7471001, 139, 0, -7471000, 139, 1, -7470999, 139, 1, 
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( -7405466, 58, 589828, -7405464, 58, 589825, -7405463, 58, 589826, -7405462, 58, 589827, -7405461, 58, 655361, -7339928, 58, 655362, -7339927, 58, 589829, -7339926, 58, 589830, -7339925, 58, 589832, -7143316, 58, 589831 )
 
 [node name="Roof" type="TileMap" parent="Tiles"]
 tile_set = ExtResource( 3 )
