@@ -1,4 +1,10 @@
-#the "root" network node
+#thee network node - all communication is routed through here
+
+#the game and loaded world nodes connect to signals of this node but are NOT added as children
+
+#the relevant signals are connected
+
+#there may be child nodes added that deal with different areas later on depending on how crowded things get
 
 extends Node
 
@@ -15,7 +21,12 @@ const PORT = 4200
 #signal connection_failed()
 #signal connection_succeeded()
 #signal disconnected_from_server() #server_disconnected
+
+#when a playe has been/registered/deregitered
+
 signal players_updated()
+
+
 
 var myName = "Client"
 
@@ -37,13 +48,22 @@ var ui_stats_tab = null
 var ui_stats = null
 var ui_inventory = null
 
-var menu = null
+var menu = null #Game.gd
 
 var last_checkpoint = "World Objects/spawn1"
 
 #Stats
 var map = null		#Currently loaded map
-var player = null
+var player = null setget player_set, player_get #:Player
+
+#var is_multiplayer:bool = false
+
+#enum ConnectionState{
+	
+#	CONNECTED_TO_SERVER,
+#	NOT_CONNECTED_TO
+	
+#}
 
 ##
 
@@ -118,11 +138,13 @@ func on_connected_to_server():
 	
 	#register this client with the server
 	rpc_id(1, "register_player", myName)
+	
+	#is_multiplayer = true
 
 #Callback for the SceneTree, called when disconnected to the server	
 func on_server_disconnected():
 	myPlayers.clear()
-	emit_signal("disconnected_from_server")
+	#emit_signal("disconnected_from_server")
 	
 	#Try to connect again?
 	#connect_to_server()
@@ -139,7 +161,12 @@ func on_server_disconnected():
 
 	#Try to connect again?
 	#connect_to_server()
-	
+
+func is_connected_to_server():
+	return get_tree().network_peer.get_connection_status() == NetworkedMultiplayerPeer.CONNECTION_CONNECTED
+
+#player registration
+
 puppet func register_player(id, newPlayerData):
 	myPlayers[id] = newPlayerData
 	emit_signal("players_updated")
@@ -152,12 +179,46 @@ puppet func unregister_player(id):
 func get_player_list():
 	return myPlayers.values()
 	
-puppet func pre_start_game():
+#puppet func pre_start_game():
 	#get_node("/root/Main").hide() #hide something?
-	var world = load("res://Maps/World1-1.tscn")
-	get_tree().get_root().add_child(world)
+	#var world = load("res://Maps/World1-1.tscn")
+	#get_tree().get_root().add_child(world)
 	
 	#Then add players to the world node at some point
 	
-	rpc_id(1, "populate_world")
+	#rpc_id(1, "populate_world")
+	#pass
 	
+func player_set(thePlayer): #:Player
+	
+	#listen to player
+	
+	if(player != null):
+		player.disconnect("moved", self, "on_player_move")
+	
+	if(thePlayer != null):
+		thePlayer.connect("moved", self, "on_player_move")
+	
+	player = thePlayer
+
+func player_get():
+	return player
+	
+func on_player_moved(velocity, last_dir):
+	
+	#report player movement to the server
+	
+	rpc_id(1, "on_player_moved_server", velocity, last_dir)
+	
+	pass
+
+#client connected/game started on client
+
+func connected_startup():
+	
+	rpc_id(1, "get_server_game_info")
+
+	
+	
+	pass
+

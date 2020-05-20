@@ -53,10 +53,10 @@ func on_connected_to_server():
 	
 	Game_State.main.remove_child(self)
 	
-	#Game_State.main.pre_start_game()
-	
 	Game_State.disconnect("connected_to_server", self, "on_connected_to_server")
 	Game_State.disconnect("connection_failed", self, "on_connected_to_server")
+	
+	#Game_State.main.pre_start_game()
 	
 
 func on_connection_failed():

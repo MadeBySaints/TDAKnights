@@ -1,11 +1,13 @@
 extends KinematicBody2D
 class_name PlayerController
 
-const MAX_SPEED = 50
-const ACCEL = 350
-var velocity = Vector2()
-var last_dir
+const MAX_SPEED:int = 50
+const ACCEL:int = 350
+var velocity:Vector2 = Vector2()
+var last_dir:String
 
+
+signal moved(velocity, last_dir) #Vector2, String
 
 func _ready():
 	pass
@@ -54,6 +56,8 @@ func _physics_process(delta):
 			$AnimatedSprite.play("idle down")
 		else:
 			$AnimatedSprite.play("idle down")
+	
+	emit_signal("moved", velocity, last_dir)
 	
 	#Started work on an in-game menu input
 	
