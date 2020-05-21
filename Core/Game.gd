@@ -1,6 +1,9 @@
 extends Node
 
 func _ready():
+	
+	print("_ready(): Game")
+	
 	Game_State.main = self
 	Game_State.main_menu = load("res://Core/TitleScreen.tscn").instance()
 	reload_game()
@@ -15,7 +18,7 @@ func _notification(what):
 		save_game()
 		get_tree().quit()
 
-#starts a single/multiplayer game
+#starts a single player game
 
 func start_game():
 	
@@ -27,13 +30,13 @@ func start_game():
 	
 	#probably have a loading screen
 	
-	if(Game_State.is_connected_to_server()):
+	#if(Game_State.is_connected_to_server()):
 		
 		#get loaded map from server
 		
 		
 		
-		pass
+		#pass
 	
 	#the singleplayer game mopde can only on be played in the editor 
 	

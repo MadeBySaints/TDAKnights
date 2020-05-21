@@ -77,6 +77,9 @@ var player = null setget player_set, player_get #:Player
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
+	print("_ready(): Game_State")
+	
 	var tree = get_tree()
 	
 	tree.connect("connected_to_server", self, "on_connected_to_server") #_connected_ok
@@ -136,15 +139,25 @@ func connect_to_server(ip = IP, port = PORT): #port is apparently not an int whi
 func on_connected_to_server():
 	#emit_signal("connection_succeeded")
 	
+	#client game initailised
+	
+	#if game is running, stop game
+	
 	#register this client with the server
 	rpc_id(1, "register_player", myName)
 	
 	#is_multiplayer = true
+	
+	#client game start
+	
+	rpc_id(1, "get_map_client")
 
 #Callback for the SceneTree, called when disconnected to the server	
 func on_server_disconnected():
 	myPlayers.clear()
 	#emit_signal("disconnected_from_server")
+	
+	#map set to null
 	
 	#Try to connect again?
 	#connect_to_server()
@@ -165,15 +178,32 @@ func on_server_disconnected():
 func is_connected_to_server():
 	return get_tree().network_peer.get_connection_status() == NetworkedMultiplayerPeer.CONNECTION_CONNECTED
 
-#player registration
+#player registration - restered locally - called from register_player on the server
 
 puppet func register_player(id, newPlayerData):
 	myPlayers[id] = newPlayerData
 	emit_signal("players_updated")
 	
+	#loads player
+	
+	player = load("res://Core/Player.tscn").instance()
+	
+	#future: select which player based on var
+
+#unrestered locally - called from unregister_player on the server - when a player disconnects
+
 puppet func unregister_player(id):
 	myPlayers.erase(id)
 	emit_signal("players_updated")
+	
+#map
+
+#called from get_map_client on the server
+
+puppet func set_map_client(map):
+	print("Load Map: " + map)
+	
+	#Load map
 
 #Returns a list of player names
 func get_player_list():
@@ -214,11 +244,15 @@ func on_player_moved(velocity, last_dir):
 
 #client connected/game started on client
 
-func connected_startup():
+#func connected_startup():
 	
-	rpc_id(1, "get_server_game_info")
+#	rpc_id(1, "get_server_game_info")
 
 	
 	
-	pass
+#	pass
 
+#disconnect from the server
+
+func disconnect_client():
+	rpc_id(1, "disconnect_client")
