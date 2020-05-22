@@ -7,7 +7,7 @@ var velocity:Vector2 = Vector2()
 var last_dir:String
 
 
-signal moved(velocity, last_dir) #Vector2, String
+signal moved(pos, velocity, last_dir) #Vector2, String
 
 func _ready():
 	pass
@@ -57,7 +57,7 @@ func _physics_process(delta):
 		else:
 			$AnimatedSprite.play("idle down")
 	
-	emit_signal("moved", velocity, last_dir)
+	emit_signal("moved", position, velocity, last_dir)
 	
 	#Started work on an in-game menu input
 	

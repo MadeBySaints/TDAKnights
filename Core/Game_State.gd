@@ -56,14 +56,21 @@ var last_checkpoint = "World Objects/spawn1"
 var map = null		#Currently loaded map
 var player = null setget player_set, player_get #:Player
 
+#var pendingServerCalls = []
+
+var pendingServerCalls = {}
+
 #var is_multiplayer:bool = false
 
-#enum ConnectionState{
+#methods to be called from the server
+
+enum ServerCalls{
 	
-#	CONNECTED_TO_SERVER,
-#	NOT_CONNECTED_TO
+	REGISTER_PLAYER,
+	GET_MAP_CLIENT,
+	UNREGISTER_PLAYER
 	
-#}
+}
 
 ##
 
@@ -130,11 +137,31 @@ func connect_to_server(ip = IP, port = PORT): #port is apparently not an int whi
 	
 	#if sTree.network_peer.get_connection_status() == 2:
 	#	pass
+
+#sets which method will be called by the server and aproximately when it calling rpc method was called in OS millisecond ticks
+
+func set_pending_server_calls(method_to_be_called:String):
+	pendingServerCalls[method_to_be_called] = OS.get_ticks_msec()
+
+func get_pending_server_calls():
+	return pendingServerCalls.duplicate()
+
+func get_pending_server_calls_count():
+	return pendingServerCalls.size()
+
+func get_pending_server_calls_empty():
+	return pendingServerCalls.empty()
 	
-	
-	
-	
-	
+#client methods that call server methods
+
+#rpcd to:, rpcd from 
+
+#server: "register_player", client: "register_player"
+
+#server: "get_map_client", client: "set_map_client" 
+
+
+
 #Callback for the SceneTree, called when connected to the server
 func on_connected_to_server():
 	#emit_signal("connection_succeeded")
@@ -146,16 +173,30 @@ func on_connected_to_server():
 	#register this client with the server
 	rpc_id(1, "register_player", myName)
 	
+	set_pending_server_calls("register_player")
+	
+	#pendingServerCalls.push_front(ServerCalls.REGISTER_PLAYER)
+	
 	#is_multiplayer = true
 	
 	#client game start
 	
 	rpc_id(1, "get_map_client")
+	
+	set_pending_server_calls("set_map_client")
+	
+	#pendingServerCalls.push_front(ServerCalls.GET_MAP_CLIENT)
+	
+	#now in the state of waiting for player being registered and map load being confirmed
+	
+	#make a note of what is being waited for - put it in an array or something
 
 #Callback for the SceneTree, called when disconnected to the server	
 func on_server_disconnected():
 	myPlayers.clear()
 	#emit_signal("disconnected_from_server")
+	
+	pendingServerCalls.clear()
 	
 	#map set to null
 	
@@ -178,9 +219,9 @@ func on_server_disconnected():
 func is_connected_to_server():
 	return get_tree().network_peer.get_connection_status() == NetworkedMultiplayerPeer.CONNECTION_CONNECTED
 
-#player registration - restered locally - called from register_player on the server
+#player registration - regitered locally - called from register_player on the server
 
-puppet func register_player(id, newPlayerData):
+puppet func register_player(id, newPlayerData): #, server_map):
 	myPlayers[id] = newPlayerData
 	emit_signal("players_updated")
 	
@@ -189,6 +230,15 @@ puppet func register_player(id, newPlayerData):
 	player = load("res://Core/Player.tscn").instance()
 	
 	#future: select which player based on var
+	
+	#get map on server in this method and set it up here
+	
+	#print("Load Map: " + server_map)
+	
+	#just load the default map for now
+	
+	#map = load("res://Maps/World1-1.tscn").instance()
+	
 
 #unrestered locally - called from unregister_player on the server - when a player disconnects
 
@@ -200,8 +250,8 @@ puppet func unregister_player(id):
 
 #called from get_map_client on the server
 
-puppet func set_map_client(map):
-	print("Load Map: " + map)
+puppet func set_map_client(server_map):
+	print("Load Map: " + server_map)
 	
 	#Load map
 
@@ -224,23 +274,25 @@ func player_set(thePlayer): #:Player
 	#listen to player
 	
 	if(player != null):
-		player.disconnect("moved", self, "on_player_move")
+		player.disconnect("moved", self, "on_player_moved")
 	
 	if(thePlayer != null):
-		thePlayer.connect("moved", self, "on_player_move")
+		thePlayer.connect("moved", self, "on_player_moved")
 	
 	player = thePlayer
 
 func player_get():
 	return player
 	
-func on_player_moved(velocity, last_dir):
+func on_player_moved(position, velocity, last_dir):
 	
 	#report player movement to the server
 	
-	rpc_id(1, "on_player_moved_server", velocity, last_dir)
+	#does not call replying rpc method
 	
-	pass
+	rpc_unreliable_id(1, "on_player_moved_server", position, velocity, last_dir)
+	
+	
 
 #client connected/game started on client
 
@@ -252,7 +304,7 @@ func on_player_moved(velocity, last_dir):
 	
 #	pass
 
-#disconnect from the server
+#does not call replying rpc method
 
 func disconnect_client():
 	rpc_id(1, "disconnect_client")
