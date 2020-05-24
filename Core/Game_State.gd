@@ -113,8 +113,6 @@ func connect_to_server(ip = IP, port = PORT): #port is apparently not an int whi
 		
 	get_tree().set_network_peer(host)
 	
-	pass
-		
 	#Can't find a method on NetworkedMultiplayerENet that conveniently allows me to check if a connection works
 	
 	#var sTree : SceneTree = get_tree()
@@ -193,12 +191,19 @@ func on_connected_to_server():
 
 #Callback for the SceneTree, called when disconnected to the server	
 func on_server_disconnected():
+	
+	print("client disconnected")
+	
 	myPlayers.clear()
 	#emit_signal("disconnected_from_server")
 	
 	pendingServerCalls.clear()
 	
 	#map set to null
+	
+	map = null
+	
+	player = null
 	
 	#Try to connect again?
 	#connect_to_server()
@@ -307,4 +312,5 @@ func on_player_moved(position, velocity, last_dir):
 #does not call replying rpc method
 
 func disconnect_client():
-	rpc_id(1, "disconnect_client")
+	#rpc_id(1, "disconnect_client")
+	get_tree().set_network_peer(null)
