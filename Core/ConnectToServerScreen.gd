@@ -53,8 +53,10 @@ func on_connected_to_server():
 	
 	Game_State.main.remove_child(self)
 	
-	Game_State.disconnect("connected_to_server", self, "on_connected_to_server")
-	Game_State.disconnect("connection_failed", self, "on_connected_to_server")
+	var gsTree : SceneTree = Game_State.get_tree()
+	
+	gsTree.disconnect("connected_to_server", self, "on_connected_to_server")
+	gsTree.disconnect("connection_failed", self, "on_connected_to_server")
 	
 	#Game_State.main.pre_start_game()
 	

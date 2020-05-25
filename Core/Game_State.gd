@@ -164,6 +164,8 @@ func get_pending_server_calls_empty():
 func on_connected_to_server():
 	#emit_signal("connection_succeeded")
 	
+	print("connection succeeded!")
+	
 	#client game initailised
 	
 	#if game is running, stop game
@@ -199,7 +201,13 @@ func on_server_disconnected():
 	
 	pendingServerCalls.clear()
 	
-	#map set to null
+	#stop game and return to menu
+	
+	main.remove_child(map)
+	
+	main.add_child(main_menu)
+	
+	#set map and player to null
 	
 	map = null
 	
@@ -227,12 +235,19 @@ func is_connected_to_server():
 #player registration - regitered locally - called from register_player on the server
 
 puppet func register_player(id, newPlayerData): #, server_map):
+	
+	pendingServerCalls.erase("register_player")
+	
+	print("register_player called")
+	
 	myPlayers[id] = newPlayerData
 	emit_signal("players_updated")
 	
 	#loads player
 	
-	player = load("res://Core/Player.tscn").instance()
+	#player = load("res://Core/Player.tscn").instance()
+	
+	player_set(load("res://Core/Player.tscn").instance())
 	
 	#future: select which player based on var
 	
@@ -256,9 +271,26 @@ puppet func unregister_player(id):
 #called from get_map_client on the server
 
 puppet func set_map_client(server_map):
+	
+	pendingServerCalls.erase("set_map_client")
+	
+	print("set_map_client called")
+	
 	print("Load Map: " + server_map)
 	
 	#Load map
+	
+	map = load("res://Maps/World1-1.tscn").instance()
+	
+	main.add_child(map)
+	
+	map.get_node("World Objects").add_child(player)
+	
+	player.set_position(map.get_node(last_checkpoint).get_position())
+
+	main.remove_child(main_menu)
+	
+	#game started
 
 #Returns a list of player names
 func get_player_list():
