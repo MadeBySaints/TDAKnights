@@ -1,8 +1,11 @@
 extends PlayerController
 class_name Player
-var max_health = 50
-var health = 50
 
+var max_health:int = 50
+
+var health:int = 50
+
+var player_name:String
 
 func _ready():
 	pass

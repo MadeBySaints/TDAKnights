@@ -234,13 +234,31 @@ func is_connected_to_server():
 
 #player registration - regitered locally - called from register_player on the server
 
-puppet func register_player(id, newPlayerData): #, server_map):
+puppet func register_player(id, newPlayerName): #): newPlayerData): #, server_map):
 	
 	pendingServerCalls.erase("register_player")
 	
 	print("register_player called")
 	
-	myPlayers[id] = newPlayerData
+	#myPlayers[id] = newPlayerData
+	
+	
+	
+	if(id != get_tree().get_network_unique_id()):
+	
+		var new_player = Player.new()
+	
+		new_player.player_name = newPlayerName
+	
+		myPlayers[id] = new_player
+	
+	else:
+		
+		#player.player_name 
+		
+		myPlayers[id] = player
+	
+	
 	emit_signal("players_updated")
 	
 	#loads player
