@@ -9,8 +9,6 @@ Everything is subject to change at a moments notice without warning.
 Feel free to submit pull requests for relevant contributions. We would love for the community to contribute to the project, and help get it off the ground! Any contributions accepted will be accredited properly ;)
 
 ## Current State of the Project
-TDA Knights roadmap can be found on Trello https://trello.com/b/SDzoA1S2/tdaknights
-The dynamics and mechanics are currently being rebuilt, and our Discord Server contains the latest updates and media.
-https://discord.gg/wjfYKyR
+TDA Knights is currently on hold indefinitely.
 
 This repo may contain copyrighted assets, namely images and other premium content (used with permission). While the code is openly available, these assets are not. Anyone who violates the copyright protection of these assets may be subject to penalties by the respective copyright holders.
